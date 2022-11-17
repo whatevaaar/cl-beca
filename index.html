@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora de becas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora de becas</h1>
+      <section>
+        <form onsubmit="event.preventDefault(); processForm(this)">
+          <fieldset>
+            <legend>Datos del alumno</legend>
+            <p>
+              <label for="input-nombre">Nombre</label>
+              <input type="text" name="nombre" required id="input-nombre" />
+            </p>
+            <p>
+              <label for="input-apellido">Apellido</label>
+              <input type="text" name="apellido" required id="input-apellido" />
+            </p>
+            <p>
+              <label for="input-promedio">Promedio</label>
+              <input
+                oninput="inputMaxLenghtValidator(this)"
+                type="number"
+                required
+                name="promedio"
+                id="input-promedio"
+                min="0"
+                max="10"
+                step=".1"
+                maxlength="2"
+              />
+            </p>
+            <input type="submit" />
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <table id="tabla-promedios">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Promedio</th>
+              <th scope="col">Beca(%)</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </main>
+    <script type="text/javascript" src="scripts/index.js"></script>
+  </body>
+</html>
