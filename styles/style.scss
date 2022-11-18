@@ -1,0 +1,86 @@
+$mainColor: #023047;
+$accentColor: #ffb703;
+$rowOdd: #219ebc;
+$rowEven: #8ecae6;
+
+@mixin borderRoundedCorner() {
+  border-radius: 0.3em;
+  border: 0.2em solid $mainColor;
+}
+
+h1 {
+  background-color: #219ebc;
+  color: aliceblue;
+  text-align: center;
+  padding: 0.5em;
+  margin-top: 0;
+}
+#tabla-promedios {
+  table-layout: fixed;
+  @include borderRoundedCorner();
+  border-collapse: collapse;
+  margin: auto;
+  th,
+  td {
+    padding: 0.2em;
+  }
+  tr:nth-child(odd) {
+    background-color: $rowOdd;
+  }
+  tr:nth-child(even) {
+    background-color: $rowEven;
+  }
+
+  thead {
+    tr {
+      background-color: $accentColor !important;
+    }
+    th:nth-child(1) {
+      width: 30%;
+    }
+    th:nth-child(2) {
+      width: 30%;
+    }
+    th:nth-child(3) {
+      width: 20%;
+    }
+    th:nth-child(4) {
+      width: 20%;
+    }
+  }
+  tbody {
+    text-align: center;
+  }
+}
+
+form {
+  margin: auto;
+  text-align: center;
+  display: block;
+  max-width: 30vw;
+  margin-bottom: 4rem;
+  label{
+    width: 20%;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+  }
+  input {
+    @include borderRoundedCorner();
+    padding: 0.5em;
+
+    width: 50%;
+  }
+  input[type="submit"] {
+    display: block;
+    margin: auto;
+    background-color: $accentColor;
+  }
+  fieldset {
+    @include borderRoundedCorner();
+  }
+  legend {
+    font-size: x-large;
+    font-weight: bold;
+  }
+}

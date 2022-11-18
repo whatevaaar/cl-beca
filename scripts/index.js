@@ -7,13 +7,13 @@ function calculateGrant(grade) {
   else if (grade >= 9) {
     return grade === 9 ? 30 : round((100 * grade) / 10);
   } else {
-    return grade === 8 ? 30 : round((30 * grade) / 9);
+    return grade === 8 ? 20 : round((30 * grade) / 9);
   }
 }
 
 function appendToTable(formData) {
-  const table = document.getElementById("tabla-promedios");
-  const row = table.insertRow(1);
+  const table = document.getElementById("tabla-promedios").getElementsByTagName('tbody')[0];
+  const row = table.insertRow(0);
   const cellNombre = row.insertCell(0);
   const cellApellido = row.insertCell(1);
   const cellPromedio = row.insertCell(2);

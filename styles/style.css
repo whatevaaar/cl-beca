@@ -1,0 +1,76 @@
+h1 {
+  background-color: #219ebc;
+  color: aliceblue;
+  text-align: center;
+  padding: 0.5em;
+  margin-top: 0;
+}
+
+#tabla-promedios {
+  table-layout: fixed;
+  border-radius: 0.3em;
+  border: 0.2em solid #023047;
+  border-collapse: collapse;
+  margin: auto;
+}
+#tabla-promedios th,
+#tabla-promedios td {
+  padding: 0.2em;
+}
+#tabla-promedios tr:nth-child(odd) {
+  background-color: #219ebc;
+}
+#tabla-promedios tr:nth-child(even) {
+  background-color: #8ecae6;
+}
+#tabla-promedios thead tr {
+  background-color: #ffb703 !important;
+}
+#tabla-promedios thead th:nth-child(1) {
+  width: 30%;
+}
+#tabla-promedios thead th:nth-child(2) {
+  width: 30%;
+}
+#tabla-promedios thead th:nth-child(3) {
+  width: 20%;
+}
+#tabla-promedios thead th:nth-child(4) {
+  width: 20%;
+}
+#tabla-promedios tbody {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  text-align: center;
+  display: block;
+  max-width: 30vw;
+  margin-bottom: 4rem;
+}
+form label {
+  width: 20%;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+}
+form input {
+  border-radius: 0.3em;
+  border: 0.2em solid #023047;
+  padding: 0.5em;
+  width: 50%;
+}
+form input[type=submit] {
+  display: block;
+  margin: auto;
+  background-color: #ffb703;
+}
+form fieldset {
+  border-radius: 0.3em;
+  border: 0.2em solid #023047;
+}
+form legend {
+  font-size: x-large;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
