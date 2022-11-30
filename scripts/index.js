@@ -18,10 +18,13 @@ function appendToTable(formData) {
   const cellApellido = row.insertCell(1);
   const cellPromedio = row.insertCell(2);
   const cellBeca = row.insertCell(3);
+  const cellMatricula = row.insertCell(4);
+  const discount = calculateGrant(formData.promedio);
   cellNombre.innerHTML = formData.nombre;
   cellApellido.innerHTML = formData.apellido;
   cellPromedio.innerHTML = formData.promedio;
-  cellBeca.innerHTML = calculateGrant(formData.promedio);
+  cellBeca.innerHTML = discount;
+  cellMatricula.innerHTML = formData.matricula - discount;
 }
 
 function validateForm(formData) {
